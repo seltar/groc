@@ -93,7 +93,7 @@ module.exports = Utils =
       # We also strip the extension under the assumption that the consumer of
       # this path map is going to substitute in their own.  Plus, if they care
       # about the extension, they can get it from the keys of the map.
-      result[absPath] = if not path.extname(file) then file else file[0...-path.extname(file).length]
+      result[absPath] = file #if not path.extname(file) then file else file[0...-path.extname(file).length]
 
     result
 
